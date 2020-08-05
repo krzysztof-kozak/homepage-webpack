@@ -1,153 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WTF: Webpack starter kit</title>
-    <meta name="description" content="Your project description" />
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta
-      property="og:image"
-      content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png"
-    />
-
-    <!-- uncomment the line below to enable PWA  -->
-    <!-- <link rel="manifest" href="manifest.json" /> -->
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="pwa/apple-icon-180.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="167x167"
-      href="pwa/apple-icon-167.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="pwa/apple-icon-152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="pwa/apple-icon-120.png"
-    />
-
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-2732.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2732-2048.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2388.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2388-1668.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2224.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2224-1668.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1536-2048.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-1536.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2688.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2688-1242.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1125-2436.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2436-1125.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-828-1792.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1792-828.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2208.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2208-1242.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-750-1334.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1334-750.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-640-1136.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1136-640.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
+    <title>WTF nauka</title>
   </head>
+
   <body>
-    <div class="hello">
-      <img class="hello__logo" src="../assets/img/logo.svg" alt="WTF " />
-      <span class="hello__circles"></span>
+    <button class="menu-button menu-button--js" aria-label="Otwórz menu">
+      MENU
+    </button>
+    <nav class="navigation navigation--js">
+      <a class="navigation__link" href="index.html">Strona główna</a>
+      <a class="navigation__link" href="notatki.html">Notatki</a>
+      <a class="navigation__link" href="linki.html">Linki</a>
+    </nav>
+    <div class="page-content" id="top">
+      <header class="page-title">
+        <h1 class="page-title__header page-title__header--js">STRONA DOMOWA</h1>
+
+        <img class="page-title__picture" src="../assets/img/wtf-wpidea.png" alt="Logo WTF" />
+      </header>
+
+      <main class="main">
+        <div class="half-size-sections">
+          <section class="about">
+            <h2 class="about__header">O mnie</h2>
+            <p class="about__content">
+              Jestem absolwentem budownictwa, pracuję jako kierownik
+              laboratoruium budowlanego. Uwielbiam piłką nożną, słuchać muzykę,
+              lubię czytać książki (głównie fantastyka) oraz grać w gry i
+              oczywiście w piłkę.<br>
+              Jakiś czas temu stwierdziłem, że budownictwo nie jest dla mnie i
+              że spróbuję swoich sił w programowaniu...
+            </p>
+          </section>
+
+          <section class="learn">
+            <h2 class="learn__header">Zmiany</h2>
+
+            <p class="learn__content">
+              ...Zacząłem od nauki Pythona,
+              jednak nauka bez większego planu szła mi średnio. I nagle trafiłem
+              na
+              <a
+                class="external-link"
+                href="https://cotenfrontend.pl/"
+                target="_blank"
+                >WTF</a
+              >. Poczytałem, poszperałem i stwierdziłem, że czemu nie spróbować
+              i o to jestem :)<br />
+              Dołączyłem tuż przy starcie drugiego tygodnia. Na szczęście
+              szkolenie zaczęło się spokojnie i szybko nadrobiłem. <br>
+              To jest moja pierwsza strona, która posłuży mi do ćwiczeń, notatek oraz zadań domowych.
+            </p>
+          </section>
+        </div>
+        <section class="overview" id="progress">
+          <h2 class="overview__header">Przegląd tematyki w danym tygodniu</h2>
+          <article class="week">
+            <h3 class="week__header">Tydzień 1</h3>
+            <p class="week__content">
+              Na początku dowiedzieliśmy się czym jest frontend, poznaliśmy
+              sciężkę rozwoju oraz skonfigurowaliśmy potrzebne narzędzia.
+            </p>
+          </article>
+          <article class="week">
+            <h3 class="week__header">Tydzień 2</h3>
+            <p class="week__content">
+              W tym tygodniu poznaliśmy strukturę stron internetowych.
+              Zapoznaliśmy się z podstawami HTML-a i CSS-a. Bawiliśmy się także
+              devtoolsami i przerabialiśmy na szybko strony w ramach psikusów ;)
+            </p>
+          </article>
+          <article class="week">
+            <h3 class="week__header">Tydzień 3</h3>
+            <p class="week__content">
+              Trzeci tydzień rozkręcił nam trochę szkolenie. Dowiedzieliśmy się
+              co to Kanban oraz jak zapisywać i nazywać rzeczy. Dowiedzieliśmy
+              się jak działa przeglądarka oraz terminal. Mieliśmy także pierwszą
+              styczność z JavaScrpitem i kolejne rzeczy z HTML oraz CSS.
+            </p>
+          </article>
+          <article class="week">
+            <h3 class="week__header">Tydzień 4</h3>
+            <p class="week__content">
+              Ten tydzień był obfity w wiedzę. Założyliśmy konta na Git oraz
+              Github. Zaczeliśmy bardziej stylować naszą stronę, poznaliśmy czym
+              jest box-model, BEM oraz DOM.
+            </p>
+          </article>
+          <article class="week">
+            <h3 class="week__header">Tydzień 5</h3>
+            <p class="week__content">
+              Poznaliśmy właśnie dziedziczność w HTML, funkcje i obiekty w JS
+              (ale zagmatwane), metody debuggingu, listy, tabele oraz flexboxa
+              do stylowania. Robiliśmy także własne wizytówki.
+            </p>
+          </article>
+          <article class="week">
+            <h3 class="week__header">Tydzień 6</h3>
+            <p class="week__content">
+              W tym tygodniu nauczyliśmy się jak tworzyć formularze,
+              dostosowywać stronę do urządzeń mobilnych za pomocą media queries
+              i jak tworzyć layout za pomocą grida. Poza tym stworzyliśmy
+              statyczny hosting w GitHubie i <em>upiekliśmy</em> "hamburgera" za
+              pomocą JS.
+            </p>
+          </article>
+          <article class="week">
+            <h3 class="week__header">Tydzień 7</h3>
+            <p class="week__content">
+              Nabieramy tempa. Poznaliśmy pseudoelementy i pseudoselektory oraz
+              środowisko node.js w raz z modułami do niego. Zobaczyliśmy do
+              czego przydaje się folder .gitignore oraz dokonaliśmy prawdziwej
+              rewolucji za pomocą preprocesora CSS - Sass.
+            </p>
+          </article>
+        </section>
+        <footer class="main-footer">
+          Strona powstaje na potrzeby szkolenia <em>cotenfrontend</em> by
+          Bartosz Małecki
+        </footer>
+        <nav>
+          <a class="up-navigation" href="#top">DO GÓRY</a>
+        </nav>
+        <script src="../js/index.js"></script>
+      </main>
     </div>
   </body>
 </html>
