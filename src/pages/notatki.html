@@ -1652,7 +1652,88 @@ box-sizing: inherit;
           <article class="week-article">
             <h3 id="week8" class="week-article__heading">Tydzień 8</h3>
             <p class="week-article__content"></p>
-
+            <section class="inner-section">
+              <h4 class="inner-section__heading">
+                Moduły
+              </h4>
+              <p class="inner-section__text">
+                Moduły porządkują projekt, skracją kod, umożliwiają korzystanie
+                z gotowych elementów.
+              </p>
+              <p class="inner-section__text">
+                W SCSS można zaimportować moduł z innego pliku (<strong
+                  ><span class="mark">@import "źródło</span></strong
+                >) lub bezpośrednio z internetu (bez pobierania) - np. czcionkę.
+              </p>
+              <p class="inner-section__text">
+                Moduły w JS: w przeglądarce działają bez pobierania modułu ES6
+                Modules. Możemy eksportować i importować moduły między własnymi
+                plikami. aby tu umożliwić, do znacznika script dodajemy
+                type="module".
+              </p>
+              <div class="code-wrapper">
+                <pre><code class="code">
+&lt;script type="module" scr="main.js"&gt;&lt;/script&gt;
+                </code></pre>
+              </div>
+              <p class="inner-section__text">
+                Eksport nazwany: w pliku, z którego chcemy eksportować moduł,
+                dodajemy przed funkcją polecenie "eksport", np:
+              </p>
+              <div class="code-wrapper">
+                <pre><code class="code">export const hello = (name) =&gt; {...}
+</code></pre>
+              </div>
+              <p class="inner-section__text">
+                Wywołujemy moduł poleceniem "import". Możemy importować kilka
+                rzeczy na raz:
+              </p>
+              <div class="code-wrapper">
+                <pre><code class="code">import {hello, myFunction} from './file.js';
+</code></pre>
+              </div>
+              <p class="inner-section__text">
+                Eskport domyślny: przez polecenie "export default". Najpierw
+                definiujemy zmienną lub funkcję, a następnie piszemy polecenie:
+              </p>
+              <div class="code-wrapper">
+                <pre><code class="code">export default hello;
+</code></pre>
+              </div>
+              <p class="inner-section__text">
+                Wywołujemy ją natomiast pod dowolną nazwą oraz bez nawiasów:
+              </p>
+              <div class="code-wrapper">
+                <pre><code class="code">import greeting from './file.js';</code></pre>
+              </div>
+              <p class="inner-section__text">
+                Dzięki importowi nie trzeba w wielu miejscach kopiować tego
+                samego kodu, wystarczy wywołać funkcję.
+              </p>
+              <p class="inner-section__text">
+                Można importować również z node modules:
+              </p>
+              <div class="code-wrapper">
+                <pre><code class="code">import nazwaRzeczy from 'nazwa-modułu';</code></pre>
+              </div>
+              <p class="inner-section__text">
+                W przypadku gdy mamy długą lub kolidującą z czymś nazwę, możemy
+                ją zamienić:
+              </p>
+              <div class="code-wrapper">
+                <pre><code class="code">import {veryLongName as newName} from 'ścieżka-do-pliku';</code></pre>
+              </div>
+              <p class="inner-section__text">
+                Możemy importować całą zawartośc pliku:
+              </p>
+              <div class="code-wrapper">
+                <pre><code class="code">import * as newName from 'ścieżka-do-pliku';</code></pre>
+              </div>
+              <p class="inner-section__text">
+                W importowaniu oraz ogarnianiu innych podobnych procesów pomaga
+                nam WEBPACK..
+              </p>
+            </section>
             <section class="inner-section">
               <h4 class="inner-section__heading">
                 Webpack
@@ -1697,16 +1778,67 @@ box-sizing: inherit;
                 Webpacka można rozszerzać za pomocą paczek z NPM.
               </p>
               <p class="inner-section__text">
-                Korzystanie z webpacka staje się obecnie standardem, lecz przy małych projektach nie jest to wymagane.
+                Korzystanie z webpacka staje się obecnie standardem, lecz przy
+                małych projektach nie jest to wymagane.
               </p>
               <p class="inner-section__text">
-                "Nasz" starterkit od Maćka: <a
-                class="external-link"
-                href="https://github.com/maciejkorsan/wtf-webpack-starter"
-                target="_blank"
-                >wtf-starter-kit</a
-              > 
+                "Nasz" starterkit od Maćka:
+                <a
+                  class="external-link"
+                  href="https://github.com/maciejkorsan/wtf-webpack-starter"
+                  target="_blank"
+                  >wtf-starter-kit</a
+                >
               </p>
+            </section>
+            <section class="inner-section">
+              <h4 class="inner-section__heading">
+                CSS Custom Properties
+              </h4>
+              <p class="inner-section__text">
+                - czyli tzw. "zmienne" CSS.
+              </p>
+
+              <div class="code-wrapper">
+                <pre><code class="code">
+      :root {
+        --nazwa: wartość;
+        --inna-nazwa: wartość;
+      }  
+        
+                      </code></pre>
+              </div>
+              <p class="inner-section__text">
+                Pobranie wartości ze zmiennej:
+                <span class="mark">właściwość: var(--nazwa)</span>
+              </p>
+              <p class="inner-section__text">
+                Zmienne CSS żyją w przeglądarce - możemy je zmieniać JS-em (w
+                odróżnieniu od zmiennych SCSS, które zostają zastąpione przez
+                zwykłe wartości w CSS). Polecenie do ustawiania wartości
+                zmiennej w JS:
+              </p>
+
+              <div class="code-wrapper">
+                <pre><code class="code">
+document.documentElement.style.setProperty('--zmienna', 'nowa-wartość');</code></pre>
+              </div>
+
+              <p class="inner-section__text">
+                W ten sposób możemy zrobic np. dark mode na całej stronie lub
+                sekcji.
+              </p>
+              <p class="inner-section__text">
+                Zmienne CSS możemy zmieniać także poprzez media queries:
+              </p>
+              <div class="code-wrapper">
+                <pre><code class="code">
+        @media (max-width: 768px) {
+            :root {
+                --nazwa: nowa-wartość;
+            }
+        }</code></pre>
+              </div>
             </section>
           </article>
         </section>
