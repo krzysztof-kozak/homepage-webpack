@@ -77,3 +77,29 @@ hamburger.addEventListener('click', () => {
   const nav = document.querySelector('.navigation--js');
   nav.classList.toggle('navigation--open');
 })
+
+//change mode
+
+
+let isLight = false;
+
+const switchModes = document.querySelector('.change-mode__button--js');
+switchModes.addEventListener('click', () => {
+  if (isLight) {
+    document.documentElement.style.setProperty('--mode-background', 'rgba(0, 0, 0, 0.6)');
+    document.documentElement.style.setProperty('--mode-button', '#ffffff');
+    document.documentElement.style.setProperty('--mode-button-label', 'black');
+    document.documentElement.style.setProperty('--mode-heading', '#ffffff');
+    document.documentElement.style.setProperty('--mode-text-color', '#ffffff');
+    isLight = false
+  }
+  else {
+    document.documentElement.style.setProperty('--mode-background', '#dddddd');
+    document.documentElement.style.setProperty('--mode-button', '#d2bd80');
+    document.documentElement.style.setProperty('--mode-button-label', 'black');
+    document.documentElement.style.setProperty('--mode-heading', '#ffffff');
+    document.documentElement.style.setProperty('--mode-text-color', 'black');
+    isLight = true
+  }
+})
+

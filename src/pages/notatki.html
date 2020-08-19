@@ -1791,11 +1791,11 @@ box-sizing: inherit;
                 >
               </p>
             </section>
-            <section class="inner-section">
-              <h4 class="inner-section__heading">
+            <section class="inner-section change-mode">
+              <h4 class="inner-section__heading change-mode__heading">
                 CSS Custom Properties
               </h4>
-              <p class="inner-section__text">
+              <p class="inner-section__text change-mode__text">
                 - czyli tzw. "zmienne" CSS.
               </p>
 
@@ -1808,11 +1808,11 @@ box-sizing: inherit;
         
                       </code></pre>
               </div>
-              <p class="inner-section__text">
+              <p class="inner-section__text change-mode__text">
                 Pobranie wartości ze zmiennej:
                 <span class="mark">właściwość: var(--nazwa)</span>
               </p>
-              <p class="inner-section__text">
+              <p class="inner-section__text change-mode__text">
                 Zmienne CSS żyją w przeglądarce - możemy je zmieniać JS-em (w
                 odróżnieniu od zmiennych SCSS, które zostają zastąpione przez
                 zwykłe wartości w CSS). Polecenie do ustawiania wartości
@@ -1823,12 +1823,20 @@ box-sizing: inherit;
                 <pre><code class="code">
 document.documentElement.style.setProperty('--zmienna', 'nowa-wartość');</code></pre>
               </div>
+              <div class="change-mode__grid">
+                <p class="inner-section__text change-mode__text">
+                  W ten sposób możemy zrobic np. dark mode na całej stronie lub
+                  sekcji.
+                </p>
+                <button
+                  class="change-mode__button change-mode__button--js"
+                  aria-label="przełącz tryb"
+                >
+                  ZMIEŃ TRYB
+                </button>
+              </div>
 
-              <p class="inner-section__text">
-                W ten sposób możemy zrobic np. dark mode na całej stronie lub
-                sekcji.
-              </p>
-              <p class="inner-section__text">
+              <p class="inner-section__text change-mode__text">
                 Zmienne CSS możemy zmieniać także poprzez media queries:
               </p>
               <div class="code-wrapper">
