@@ -1849,6 +1849,76 @@ document.documentElement.style.setProperty('--zmienna', 'nowa-wartość');</code
               </div>
             </section>
           </article>
+          <article class="week-article">
+            <h3 id="week9" class="week-article__heading">Tydzień 9</h3>
+            <p class="week-article__content"></p>
+            <section class="inner-section">
+              <h4 class="inner-section__heading">
+                CSS: Prefixy
+              </h4>
+              <p class="inner-section__text">
+                Prefixy CSS określają własności dla różnych przeglądarek. Używa
+                się ich, aby starsze przeglądarki mogły korzystać z nowych
+                rzeczy (feature'ów).
+              </p>
+              <p class="inner-section__text">
+                Na stronie:
+                <a
+                  class="external-link"
+                  href="https://github.com/maciejkorsan/wtf-webpack-starter"
+                  target="_blank"
+                  >Can I Use</a
+                >
+                możemy sprawdzić, które własności i w jakich przeglądarkach,
+                potrzebują prefixów.
+              </p>
+              <p class="inner-section__text">
+                <a
+                  class="external-link"
+                  href="https://autoprefixer.github.io/"
+                  target="_blank"
+                  >Autoprefixer.github.io/</a
+                >
+                - narzędzie, które dodaje automatycznie potrzebne prefixy.
+                Starterkid webpacka który dostaliśmy, zawiera już go, więc nie
+                musimy się martwić o to.
+              </p>
+            </section>
+            <section class="inner-section">
+              <h4 class="inner-section__heading">
+                Google Fonts
+              </h4>
+              <p class="inner-section__text">
+                Fonty można importować bez pobierania ich. Jeżeli strona jest w
+                języku polskim, należy wybierać grupy
+                <strong
+                  ><span class="mark">Language -> Latin Extended</span></strong
+                >, aby były polskie znaki. Można sprawdzić czy działają za
+                pomocą zdania: "ZAŻÓŁĆ GĘŚLĄ JAŹŃ".
+              </p>
+              <p class="inner-section__text">
+                Fonty możemy importować do SCSS albo HTML. Nie zaleca się
+                korzystania z więcej niż 2ch fontów na stronie, dużo ważą,
+                strona może się długo ładować oraz będzie to nie estetyczne.
+                Jedna główna, a druga do upiekszenia.
+              </p>
+              <p class="inner-section__text">
+                @font-face w SCSS dołącza pliki z własnymi fontami (np. z
+                komputera czy adresu url).
+              </p>
+
+              <div class="code-wrapper">
+                <pre><code class="code">
+        @font-face {
+          font-family: "Open Sans";
+          src:  url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+                url(basic-sans-serif.ttf) format("truetype"),
+                local("My Font Sans");
+        }
+                                          </code></pre>
+              </div>
+            </section>
+          </article>
         </section>
 
         <footer class="main-footer">
