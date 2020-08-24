@@ -1918,6 +1918,189 @@ document.documentElement.style.setProperty('--zmienna', 'nowa-wartość');</code
                                           </code></pre>
               </div>
             </section>
+            <section class="inner-section">
+              <h4 class="inner-section__heading">
+                Git Branche
+              </h4>
+              <p class="inner-section__text">
+                Brachne (gałęzie) pozwalają ne bezkarne testowanie bez ruszania
+                oryginału. Służą do bardziej efektywnego programowania oraz
+                pozwalają zrównolegić pracę, czyli kilka osób może robić różne
+                rzeczy i na końcu się je łączy w brachnu głównym. Dzięki temu
+                zwiększa się czytelność postępu prac nad projektem.
+              </p>
+              <p class="inner-section__text">
+                Branch <strong>master</strong> jest główną gałęzią. Polecenie
+                <span class="mark">git branch</span> podaje nam info na jakiej
+                gałęzi jesteśmy.
+                <span class="mark">Git branch nazwabrancha</span> tworzy nową
+                gałąź o nazwie "nazwabrancha". Za pomocą
+                <span class="mark">git checkout "nazwabrancha"</span>
+                przęłączamy się między gałęziami. Gdy jesteśmy na pobocznych
+                branchach, commity nie wchodzą na mastera.
+              </p>
+              <p class="inner-section__text">
+                Polecenie
+                <span class="mark"
+                  >git push --set-upstream origin "nazwabrancha"</span
+                >
+                wypycha nam commita tworząc od razu "nazwabrancha" na Githubie.
+              </p>
+              <p class="inner-section__text">
+                Aby połączyć gałęzie:
+                <span class="mark">git merge "nazwabrancha"</span> z poziomu
+                mastera.
+              </p>
+            </section>
+            <section class="inner-section">
+              <h4 class="inner-section__heading">
+                Markdown
+              </h4>
+              <p class="inner-section__text">
+                Jest to język znaczników. Nie posiada semantyki. Jest czytelny
+                zarówno jako źródło, jak i wyniku. Posiada jedno uniwersalne
+                formatowanie tekstu i bezpieczne wprowadzanie treści bez
+                konieczności korzystania z HTML-a. Nie trzeba także pisać
+                edytora.
+              </p>
+
+              <ul class="inner-section-list">
+                <li>
+                  <span class="inner-section-list__content"># Nagłówek1</span>
+                </li>
+                <li>
+                  <span class="inner-section-list__content">## Nagłówek2</span>
+                </li>
+
+                <li>
+                  <span class="inner-section-list__content">### Nagłówek3</span>
+                </li>
+                <li>
+                  <span class="inner-section-list__content"
+                    >tekst zwykły - bez znacznika</span
+                  >
+                </li>
+                <li>
+                  <span class="inner-section-list__content"
+                    >link:
+                    <span class="light-on-hover" title="treść">[wtf]</span
+                    ><span class="light-on-hover" title="adres"
+                      >(https://cotenfrontend.pl)</span
+                    >
+                  </span>
+                </li>
+                <li>
+                  <span class="inner-section-list__content"
+                    >obrazek:
+                    <span class="light-on-hover" title="alt">![logo]</span
+                    ><span class="light-on-hover" title="adres"
+                      >(../pictures/logo.png)</span
+                    >
+                  </span>
+                </li>
+                <li>
+                  <span class="inner-section-list__content"
+                    >`tekst` - jednolinijkowy kod</span
+                  >
+                </li>
+                <li>
+                  <span class="inner-section-list__content"
+                    >```JavaScript<br />
+                    to jest<br />
+                    długi<br />
+                    kod blokowy<br />
+                    ``` - dłuższy fragment kodu, opcjonalnie można podać nazwę
+                    języka, wtedy wyświetli się z kolorami składni.</span
+                  >
+                </li>
+                <li>
+                  <span class="inner-section-list__content"
+                    >*tekst* - kursywa (italic)</span
+                  >
+                </li>
+                <li>
+                  <span class="inner-section-list__content"
+                    >**tekst** - pogrubienie (bold)</span
+                  >
+                </li>
+                <li>
+                  <span class="inner-section-list__content"
+                    >***tekst*** - italic + bold</span
+                  >
+                </li>
+                <li>
+                  <span class="inner-section-list__content">> cytat</span>
+                </li>
+                <li>
+                  <span class="inner-section-list__content">lista:</span>
+                  <ul class="markdown-list">
+                    <li>
+                      <span class="inner-section-list__content"
+                        >- pierwszy element</span
+                      >
+                    </li>
+                    <li>
+                      <span class="inner-section-list__content"
+                        >- drugi element</span
+                      >
+                    </li>
+                    <li>
+                      <span class="inner-section-list__content"
+                        >- trzeci element</span
+                      >
+                    </li>
+                  </ul>
+
+                  <span class="inner-section-list__content">albo:</span>
+                  <ul class="markdown-list">
+                    <li>
+                      <span class="inner-section-list__content"
+                        >1.pierwszy element</span
+                      >
+                    </li>
+                    <li>
+                      <span class="inner-section-list__content"
+                        >2.drugi element</span
+                      >
+                    </li>
+                    <li>
+                      <span class="inner-section-list__content"
+                        >3.trzeci element</span
+                      >
+                      <ul class="markdown-list">
+                        <li>
+                          <span class="inner-section-list__content"
+                            >1.podlista</span
+                          >
+                        </li>
+                        <li>
+                          <span class="inner-section-list__content"
+                            >2.podlista</span
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <p class="inner-section__text">
+                W języku markdown tworzone są np pliki readme.md. Można je
+                edytować w Githubie. Zmiany należy zacommitować, a potem
+                <strong><span class="mark">KONIECZNIE</span></strong> komenda
+                git pull w terminalu - pobierze nam zmieniony plik na dysk i
+                podmieni (bez tego będą konflikty). Obrazki dodajemy w katalogu
+                repo i podajemy ścieżkę.
+              </p>
+              <p class="inner-section__text">
+                Warto dopracować README, dać ciekawy obrazek, opis link do GH
+                pages itd., aby można było od razu podejrzeć stronę. Ciekawy i
+                niestandardowy README może zainteresować rekruterów przy
+                staraniu się o pracę.
+              </p>
+              <p class="inner-section__text">
+                Markdown działa również np w Slacku czy przeglądarkowym FB.
+              </p>
+            </section>
           </article>
         </section>
 
