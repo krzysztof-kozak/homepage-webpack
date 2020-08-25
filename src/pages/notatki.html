@@ -2101,6 +2101,57 @@ document.documentElement.style.setProperty('--zmienna', 'nowa-wartość');</code
                 Markdown działa również np w Slacku czy przeglądarkowym FB.
               </p>
             </section>
+            <section class="inner-section">
+              <h4 class="inner-section__heading">
+                JS Array (tablice)
+              </h4>
+              <p class="inner-section__text">
+                Tablice są <em>strukturą</em> danych.
+              </p>
+              <p class="inner-section__text">
+                Elementami tablicy mogą być napisy, stringi, liczby, wartości
+                true/false, obiekty itd. Można miksować typy danych.
+              </p>
+              <p class="inner-section__text">
+                Zapis:
+              </p>
+              <div class="code-wrapper">
+                <pre><code class="code">const myArray = ['element0', 'element1', 'element2']</code></pre>
+              </div>
+              <p class="inner-section__text">
+                Index - pozycja elementu w tablicy. Tablice indexujemy od zera.
+                Aby pobrać dany element: tablica[index], np.:
+                <span class="mark">myArray[1]</span> wywoła drugi element.
+              </p>
+              <p class="inner-section__text">
+                <span class="mark">myArray.length</span> podaje ilość elementów
+                (od 1!). To samo dotyczy stringów - można wypisać dowolną literę
+                wyrazu lub sprawdzić ilość liter. wypycha nam commita tworząc od
+                razu "nazwabrancha" na Githubie.
+              </p>
+              <p class="inner-section__text">
+                <span class="mark">myArray.push('element')</span> - dodaje
+                kolejny element na końcu tablicy.
+              </p>
+              <p class="inner-section__text">
+                <span class="mark">myArray.unshift('element')</span> - dodaje element na początku tablicy.
+              </p>
+              <p class="inner-section__text">
+                <span class="mark">myArray.shift('element')</span> - usuwa pierwszy element (indeksy pozostałych się zmieniają).
+              </p>
+              <p class="inner-section__text">
+                <span class="mark">myArray.pop('element')</span> - usuwa ostatni element.
+              </p>
+              <p class="inner-section__text">
+                <span class="mark">myArray.indexOf('element')</span> - podaje indeks danego elementu.
+              </p>
+              <p class="inner-section__text">
+                <span class="mark">myArray.splice(index, liczbaElementów)</span> - usuwa n elementów zaczynając od pozycji index.
+              </p>
+              <p class="inner-section__text">
+                <span class="mark">myArray.slice(index, stop)</span> - pobiera n elementów zaczynając od pozycji index i kończąc na pozycji stop (ale już bez tej pozycji, zatrzymuje się przed nią). Przykład: <span class="mark">myArray.slice(2, 3)</span> - pobierze tylko element 2.
+              </p>
+            </section>
           </article>
         </section>
 
