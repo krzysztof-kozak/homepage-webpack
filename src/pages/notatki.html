@@ -2141,11 +2141,9 @@ document.documentElement.style.setProperty('--zmienna', 'nowa-wartość');</code
               <h4 class="inner-section__heading">JS Loops (pętle)</h4>
               <p class="inner-section__text">
                 Pętla mówi, ile razy lub do którego momentu polecenie (blok
-                kodu) ma się powtarzać. 
+                kodu) ma się powtarzać.
               </p>
-              <p class="inner-section__text">
-                Podstawowa pętla w JS to FOR:
-              </p>
+              <p class="inner-section__text">Podstawowa pętla w JS to FOR:</p>
               <div class="code-wrapper">
                 <pre><code class="code">for (<span class="light-on-hover" title="od kiedy">inicjalizacja; </span
                   ><span class="light-on-hover" title="do którego momentu"
@@ -2184,21 +2182,23 @@ document.documentElement.style.setProperty('--zmienna', 'nowa-wartość');</code
 }</code></pre>
               </div>
               <p class="inner-section__text">
-                Gdy będziemy dodawać jakieś elementy do tablicy, będą one również wypisane.
+                Gdy będziemy dodawać jakieś elementy do tablicy, będą one
+                również wypisane.
               </p>
-              <p class="inner-section__text">
-                Kolejna pętla to WHILE:
-              </p>
+              <p class="inner-section__text">Kolejna pętla to WHILE:</p>
               <div class="code-wrapper">
                 <pre><code class="code">whlie (warunek logiczny) {
     kod
 }</code></pre>
               </div>
               <p class="inner-section__text">
-                Jeżeli nie warunek logiczny nie będzie się zmieniał, będzie stała wartość, pętla będzie działać w nieskończoność - doporowadzić to może do zabicia przeglądarki.
+                Jeżeli nie warunek logiczny nie będzie się zmieniał, będzie
+                stała wartość, pętla będzie działać w nieskończoność -
+                doporowadzić to może do zabicia przeglądarki.
               </p>
               <p class="inner-section__text">
-                Pętla DO WHILE - pierw wykonuje kod, następnie sprawdza warunek - kod wykona się co najmniej raz.
+                Pętla DO WHILE - pierw wykonuje kod, następnie sprawdza warunek
+                - kod wykona się co najmniej raz.
               </p>
               <div class="code-wrapper">
                 <pre><code class="code">do {
@@ -2223,7 +2223,63 @@ document.documentElement.style.setProperty('--zmienna', 'nowa-wartość');</code
 }
 </code></pre>
               </div>
-
+            </section>
+            <section class="inner-section">
+              <h4 class="inner-section__heading">
+                JS - przechowywanie danych (cookies)
+              </h4>
+              <p class="inner-section__text">
+                Cookies - są niewielkimi informacjami wysyłanymi przez serwis
+                internetowy, który odwiedzamy i zapisywane na urządzeniach.
+                Umożliwiają one np. zapamiętywanie naszych danych do logowań,
+                preferencji i personalizwoanie stron internetowych w zakesie
+                wyświetlanych treści czy dopasowania reklam.
+              </p>
+              <p class="inner-section__text">
+                Cookies możemy podejrzeć w devtoolsach wpisując w konsoli:
+                <code class="code">console.log(document.cookie)</code>.
+              </p>
+              <p class="inner-section__text">
+                Aby zapisać własne cookies: document.cookie = "nazwa = wartość";
+                (w pliku JS). Możemy je potem podejrzeć w Devtools ->
+                Application (w Firefox: Dane).
+              </p>
+              <p class="inner-section__text">
+                localStorage - do ręcznego wyczyszczenia pamięci (trwalsze).
+              </p>
+              <p class="inner-section__text">
+                sessionStorage - do zamknięcia sesji/zakładki przeglądarki.
+              </p>
+              <p class="inner-section__text">
+                <span class="mark"
+                  >localStorage.setItem('nazwa', wartość)</span
+                >
+                - wartość musi być stringiem.
+              </p>
+              <p class="inner-section__text">
+                <span class="mark"
+                  >localStorage.getItem('nazwa')</span
+                >
+                - pobieranie danych z Local Storage.
+              </p>
+              <p class="inner-section__text">
+                <span class="mark"
+                  >localStorage.removeItem('nazwa')</span
+                >
+                - usuwanie danych z Local Storage.
+              </p>
+              <p class="inner-section__text">
+                <span class="mark"
+                  >JSON.stringify(obiekt)</span
+                >
+                - zamienia obiekt na string, aby móc go umieścić jako wartość.
+              </p>
+              <p class="inner-section__text">
+                <span class="mark"
+                  >JSON.parse(JSONString)</span
+                >
+                - odwraca ten proces, zamieniając string na obiekt.
+              </p>
             </section>
           </article>
         </section>
