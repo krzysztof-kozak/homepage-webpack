@@ -1,18 +1,20 @@
 ![cover](https://cotenfrontend.pl/img/cover.png)
 
-# WTF Webpack Starter Kit 
+# WTF Homepage 
 
-Simple toolkit for your static websites development.
+Simple, webpack based page, created as a part of WTF: Co ten frontend training course. 
 
-## How to use it?
+It's my 'coding playground', where I experiment with new knowlege.  
 
-Click on `Use this template` button to generate a new repository based on this starter kit. After that clone it to your computer, go to the project directory in console and type `npm install`.
+Project contains:
 
-## Available scripts
+- main page with some info from any week of the course,
+- notatki page with all notes from course, main 'playground',
+- page with usefull links.
 
-`npm run start` - runs development mode
+## Live view
 
-`npm run build` - runs build process for production
+Live: https://bartosz-malecki.github.io/homepage-webpack/
 
-`npm run publish` - runs build process and publish the page using `gh-pages` branch
+## Technologies 
 
