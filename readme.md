@@ -1,5 +1,3 @@
-![cover](.gh/Webpack-v4.43.svg)
-
 # WTF Homepage 
 
 Simple, webpack based page, created as a part of WTF: Co ten frontend training course. 
@@ -18,3 +16,4 @@ Live: https://bartosz-malecki.github.io/homepage-webpack/
 
 ## Technologies 
 
+![cover](gh/Webpack-v4.43.svg)
