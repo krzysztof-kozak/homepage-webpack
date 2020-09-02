@@ -17,3 +17,7 @@ Live: https://bartosz-malecki.github.io/homepage-webpack/
 ## Technologies 
 
 ![cover](gh/Webpack.svg) ![cover](gh/NPM.svg) ![cover](gh/HTML5.svg) ![cover](gh/CSS3.svg) ![cover](gh/JavaScript.svg) ![cover](gh/SASS.svg) ![cover](gh/Babel.svg)
+
+## Status
+
+![cover](gh/underConstruction.png)
