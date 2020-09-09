@@ -152,6 +152,9 @@ body {
 
 .light-on-hover--root {
   color: #0a6b88;
+  &:hover {
+    color: #ff0000;
+  }
 }
 
 .learn {
@@ -408,8 +411,7 @@ pre {
 }
 
 .time {
-  margin-right: auto;
-  padding-left: 5%;
+  margin: 20px;
 }
 
 .up-navigation {
