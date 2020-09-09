@@ -12,18 +12,12 @@ const name = "Bartek";
 const age = "30";
 
 function greet(age, name) {
-  console.log(`Siemka, mam na imię ${name}, i mam ${age} lat.`);
+  console.log(`Witaj na mojej stronie testowej, mam na imię ${name} i mam ${age} lat.`);
 }
 
 greet(`30`, `Bartek`);
 
-const greet2 = (name, age) => {
-  console.log(
-    `Witaj na mojej stronie testowej, mam na imię ${name} i mam ${age} lat.`
-  );
-};
 
-greet2(`Bartosz`, 30);
 console.log("Zaczynam naukę więc proszę o wyrozumiałość :D");
 
 const hamburger = document.querySelector('.menu-button--js');
@@ -33,4 +27,7 @@ hamburger.addEventListener('click', () => {
   nav.classList.toggle('navigation--open');
 })
 
-console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
+const time = moment().format('MMMM Do YYYY, h:mm:ss a');
+const timePlaceholder = document.querySelector('.time--js');
+
+timePlaceholder.innerHTML = time;
