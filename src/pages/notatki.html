@@ -2550,27 +2550,143 @@ document.documentElement.style.setProperty('--zmienna', 'nowa-wartość');</code
                   &lt;head&gt; & Open Graph
                 </h4>
                 <p class="inner-section__text">
-                  Metaznaczniki &lt;meta&gt;- opisują nasz dokument: język strony, charset (kodowanie), viewport (jak zachowuje się strona, co widzimy), &lt;title&gt; (opis na zakładce) oraz &lt;icon&gt; - ikona na zakładce (favicon).
+                  Metaznaczniki &lt;meta&gt;- opisują nasz dokument: język
+                  strony, charset (kodowanie), viewport (jak zachowuje się
+                  strona, co widzimy), &lt;title&gt; (opis na zakładce) oraz
+                  &lt;icon&gt; - ikona na zakładce (favicon).
                 </p>
                 <p class="inner-section__text">
-                  Open Graph - protokół który opisuje stronę za pomocą specjalnych tagów meta. Najczęsciej spotykamy się z tym, gdy udostępniamy rzeczy na facebooku (opis, grafikę) - zachęca to do wejścia w link, takie pierwsze wrażenie. 
+                  Open Graph - protokół który opisuje stronę za pomocą
+                  specjalnych tagów meta. Najczęsciej spotykamy się z tym, gdy
+                  udostępniamy rzeczy na facebooku (opis, grafikę) - zachęca to
+                  do wejścia w link, takie pierwsze wrażenie.
                 </p>
                 <p class="inner-section__text">
-                  Og: image możemy stwożyć np. w <a
-                  class="external-link"
-                  href="https://www.canva.com/pl_pl/"
-                  target="_blank"
-                  >Canvie</a
-                > z szablonu. Wygląd og (z opublikowanej strony) sprawdzimy natomiast na <a
-                class="external-link"
-                href="debug.iframely.com/ "
-                target="_blank"
-                >debug.iframely.com/</a
-              >.
+                  Og: image możemy stwożyć np. w
+                  <a
+                    class="external-link"
+                    href="https://www.canva.com/pl_pl/"
+                    target="_blank"
+                    >Canvie</a
+                  >
+                  z szablonu. Wygląd og (z opublikowanej strony) sprawdzimy
+                  natomiast na
+                  <a
+                    class="external-link"
+                    href="debug.iframely.com/ "
+                    target="_blank"
+                    >debug.iframely.com/</a
+                  >.
                 </p>
                 <p class="inner-section__text">
                   Oczywiście można użyć tego np w readme na GH.
                 </p>
+              </div>
+            </section>
+
+            <section class="inner-section">
+              <div class="bem-section__wrapper">
+                <h4 class="inner-section__heading">
+                  WAI / WCAG / A11y / ARIA - czyli odpowiedzialność w internecie
+                </h4>
+                <p class="inner-section__text">
+                  WAI - Web Accessibility Initative. Inicjatywa która co jakiś
+                  czas sporządza poradniki, wytyczne, jak nasze strony powinny
+                  się zachowywać niezależnie od naszej sprawności.
+                </p>
+                <p class="inner-section__text">
+                  WCAG - Web Content Accessibility Guidelines. Dokument
+                  opisujący jak nasza strona powinna się zachowywać, działać aby
+                  osoby niepełnosprawne mogły bez problemu z niej korzystać.
+                  Niektóre strony np. instytucji, mają specjalne wymogi.
+                </p>
+                <p class="inner-section__text">
+                  The A11y (Accessibility) Project - projekt do pomocy w
+                  tworzeniu dostępych stron. Więcej info na:
+                  <a
+                    class="external-link"
+                    href="https://www.a11yproject.com/"
+                    target="_blank"
+                    >a11yproject.com/</a
+                  >.
+                </p>
+                <p class="inner-section__text">
+                  Fundacja Widzialni - zajmują się tym tematem w Polsce. Więcej
+                  info na:
+                  <a
+                    class="external-link"
+                    href="http://widzialni.org/"
+                    target="_blank"
+                    >widzialni.org</a
+                  >.
+                </p>
+                <p class="inner-section__text">Rady:</p>
+                <ol class="inner-section-list">
+                  <li>
+                    <span class="inner-section-list__content"
+                      >Pisz semantycznie</span
+                    >
+                  </li>
+                  <li>
+                    <span class="inner-section-list__content"
+                      >Trzymaj kontrast - można sprawdzic tu:
+                      <a
+                        class="external-link"
+                        href="https://color.a11y.com/Contrast/"
+                        target="_blank"
+                        >color.a11y.com/Contrast/</a
+                      ></span
+                    >
+                  </li>
+                  <li>
+                    <span class="inner-section-list__content"
+                      >Dobieraj dobrze kolory -
+                      <a
+                        class="external-link"
+                        href="http://colorsafe.co/"
+                        target="_blank"
+                        >colorsafe.co/</a
+                      >
+                      Jak coś zwracać uwagę projektantom.</span
+                    >
+                  </li>
+                  <li>
+                    <span class="inner-section-list__content"
+                      >Unikaj autoplay - nie straszyć ludzi dzwiękami z
+                      nienacka!</span
+                    >
+                  </li>
+                  <li>
+                    <span class="inner-section-list__content"
+                      >Nie ograniczaj czasowo rzeczy które mają jakąś treść -
+                      można niezdążyć.</span
+                    >
+                  </li>
+                  <li>
+                    <span class="inner-section-list__content"
+                      >Nie usuwaj :focus i outline - można stylować.</span
+                    >
+                  </li>
+                  <li>
+                    <span class="inner-section-list__content"
+                      >Używaj alt="" i kończ opisy kropką. Jak są obrazki, opisywać dokładnie.</span
+                    >
+                  </li>
+                  <li><span class="inner-section-list__content"
+                    >ARIA - Accessible Rich Internet Applications - wytyczne, atrybuty wzbogacające naszą stronę o dostepność. Nie wpływają na wygląd, ale pomagają niepełnosprawnym. <a
+                    class="external-link"
+                    href="https://www.w3.org/WAI/standards-guidelines/aria/"
+                    target="_blank"
+                    >w3.org/WAI/standards-guidelines/aria/</a
+                  ></span
+                  >
+                </li>
+                <li>
+                  <span class="inner-section-list__content"
+                    >Rozszerzenie ChromeVox - czyta naszą stronę. Język taki jaki mamy w &lt;head&gt;</span
+                  >
+                </li>
+                </ol>
               </div>
             </section>
           </article>
